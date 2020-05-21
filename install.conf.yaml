@@ -5,15 +5,13 @@
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ''
-    ~/.vim: vim
-    ~/.vimrc: vimrc
-    ~/.oh-my-zsh: oh-my-zsh/
-    ~/.zplug: zplug
-    ~/.zsh: zsh
-    ~/.ssh/config: ssh/config
-    ~/.zshrc: zshrc
-    ~/.gitconfig: git/gitconfig
+    # Shell stuff
+    ~/.aliases: shell/.aliases
+    ~/.functions: shell/.functions
+    ~/.zshrc: shell/.zshrc
+    # Git
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore: git/.gitignore
 
 - create:
     - ~/downloads
