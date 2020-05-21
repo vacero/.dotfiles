@@ -1,0 +1,25 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.oh-my-zsh: oh-my-zsh/
+    ~/.zplug: zplug
+    ~/.zsh: zsh
+    ~/.ssh/config: ssh/config
+    ~/.zshrc: zshrc
+    ~/.gitconfig: git/gitconfig
+
+- create:
+    - ~/downloads
+    - ~/projects
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [chsh -s $(which zsh), Making zsh the default shell]
+
