@@ -12,6 +12,8 @@
     # Git
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore: git/.gitignore
+    # Fzf
+    ~/.fzf.zsh: fzf/.fzf.zsh
 
 - create:
     - ~/downloads

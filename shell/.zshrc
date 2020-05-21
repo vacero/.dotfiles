@@ -10,7 +10,7 @@ antigen use oh-my-zsh # Yes, I want to use Oh My ZSH
 
 # Terminal stuff
 antigen bundle git
-antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle z
