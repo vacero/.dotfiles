@@ -1,6 +1,9 @@
 # .zshrc
 ZSH_BASE=$HOME/.dotfiles # Base directory for ZSH configuration
 
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+POWERLEVEL9K_MODE='nerdfont-complete'
+
 source $ZSH_BASE/antigen/antigen.zsh # Load Antigen
 
 source ~/.aliases # Source some extra files
@@ -31,7 +34,7 @@ case `uname` in
 esac
 
 # Set the theme
-antigen theme theunraveler
+antigen theme bhilburn/powerlevel9k powerlevel9k
 
 # And lastly, apply the Antigen stuff
 antigen apply

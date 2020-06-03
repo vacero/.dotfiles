@@ -14,6 +14,14 @@
     ~/.gitignore: git/.gitignore
     # Fzf
     ~/.fzf.zsh: fzf/.fzf.zsh
+    # Vim
+    ~/.vimrc: vim/.vimrc
+
+- tap:
+    - homebrew/cask-fonts
+
+- cask:
+    - font-hack-nerd-font
 
 - create:
     - ~/downloads
