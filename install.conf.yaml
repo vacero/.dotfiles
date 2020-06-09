@@ -29,5 +29,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [curl -s "https://get.sdkman.io" | bash, Installing SDKMan]
   - [chsh -s $(which zsh), Making zsh the default shell]
 
