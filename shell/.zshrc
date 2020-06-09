@@ -51,6 +51,9 @@ if [ -f '/Users/vacero/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vacero/g
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/vacero/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vacero/google-cloud-sdk/completion.zsh.inc'; fi
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/vacero/.sdkman"
 [[ -s "/Users/vacero/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/vacero/.sdkman/bin/sdkman-init.sh"
+

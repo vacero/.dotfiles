@@ -17,11 +17,16 @@
     # Vim
     ~/.vimrc: vim/.vimrc
 
+- brew:
+    - fzf
+    - jq
+
 - tap:
     - homebrew/cask-fonts
 
 - cask:
     - font-hack-nerd-font
+    - visual-studio-code
 
 - create:
     - ~/downloads
