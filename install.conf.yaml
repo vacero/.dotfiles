@@ -12,14 +12,21 @@
     # Git
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore: git/.gitignore
+    # Powerlevel10k
+    ~/.p10k.zsh: p10k/.p10k.zsh
     # Fzf
     ~/.fzf.zsh: fzf/.fzf.zsh
     # Vim
     ~/.vimrc: vim/.vimrc
+    # VSCode
+    ~/Library/Application Support/Code/User/settings.json: VSCode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json: VSCode/keybindings.json
+    ~/Library/Application Support/Code/User/snippets: VSCode/snippets
 
 - brew:
     - fzf
     - jq
+    - thefuck
 
 - tap:
     - homebrew/cask-fonts
