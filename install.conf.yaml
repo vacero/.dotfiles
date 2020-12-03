@@ -26,7 +26,12 @@
 - brew:
     - fzf
     - jq
+    - peco
     - thefuck
+    - watch
+    - gradle
+    - kubectx
+    - pwgen
 
 - tap:
     - homebrew/cask-fonts

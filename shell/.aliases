@@ -1,14 +1,1 @@
-alias gtest='GRAILS_OPTS=-Duser.timezone=UTC grails test-app'
-alias gtest-max='GRAILS_OPTS="-XX:MaxPermSize=1024m -Xmx1024M -Duser.timezone=UTC" grails test-app'
-alias gtest-local='COLOSSUS_PATH=../colossus GRAILS_OPTS="-Duser.timezone=UTC" grails test-app'
-alias gtest-local-max='COLOSSUS_PATH=../colossus GRAILS_OPTS="-XX:MaxPermSize=1024m -Xmx1024M -Duser.timezone=UTC" grails test-app'
-alias madafaka='grails clean-all && grails compile && grails clean && grails compile'
-alias madafaka-run='grails clean-all && grails compile && grails clean && grails compile && ticketbis grails run-app'
-alias madafaka-test='grails clean-all && grails compile && grails clean && grails compile && COLOSSUS_PATH=../colossus'
-COLOSSUS_PATH=../colossus
-ELASTICSEACH_ADDRESS=127.0.0.1
-export RABBITMQ_PORT_5672_TCP_ADDR=127.0.0.1
-alias mvn='mvn -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Djsse.enableSNIExtension=false'
-alias blaze='grails -reloading run-app -https -Dserver.port=8090 -Dlaura.server.local=true'
-alias laura='grails -reloading run-app -Dserver.port=8080 -https -Dserver.port.https=9443'
-alias hulk='grails -reloading run-app -Dserver.port=8087'
+alias k=kubectl

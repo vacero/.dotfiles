@@ -23,6 +23,8 @@ antigen bundle zdharma/zsh-diff-so-fancy
 antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle dashixiong91/zsh-vscode
+antigen bundle b4b4r07/emoji-cli
 antigen bundle z
 
 # Node stuff
@@ -55,6 +57,12 @@ if [ -f '/Users/vacero/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vacero/g
 if [ -f '/Users/vacero/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vacero/google-cloud-sdk/completion.zsh.inc'; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# AIR TOOLS
+export SPACEPORT_DIR=~/projects/spaceport
+export PATH=${SPACEPORT_DIR}/sh/:$PATH
+alias air-deploy=air-deploy.sh
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/vacero/.sdkman"

@@ -36,3 +36,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[rerere]
+	enabled = true
+[alias]
+	rmb = "!f() { git branch --merged | grep -v "master" | while read i; do git branch -d $i; done; }; f"
