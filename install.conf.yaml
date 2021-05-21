@@ -32,6 +32,9 @@
     - gradle
     - kubectx
     - pwgen
+    - jzelinskie/faq/faq
+    - golangci/tap/golangci-lint
+    - yarn
 
 - tap:
     - homebrew/cask-fonts

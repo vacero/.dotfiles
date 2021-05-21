@@ -2,7 +2,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Victor Acero
-	email = victor.acero@alliron.com
+	email = victor.acero@liberehospitality.com
 [push]
 	default = current
 [pull]
@@ -40,3 +40,5 @@
 	enabled = true
 [alias]
 	rmb = "!f() { git branch --merged | grep -v "master" | while read i; do git branch -d $i; done; }; f"
+[init]
+	defaultBranch = main
