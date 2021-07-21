@@ -35,6 +35,7 @@
     - jzelinskie/faq/faq
     - golangci/tap/golangci-lint
     - yarn
+    - gh
 
 - tap:
     - homebrew/cask-fonts
