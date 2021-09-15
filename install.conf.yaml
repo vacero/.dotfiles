@@ -26,6 +26,7 @@
 - brew:
     - fzf
     - jq
+    - yq
     - peco
     - thefuck
     - watch
