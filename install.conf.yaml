@@ -4,6 +4,9 @@
 
 - clean: ['~']
 
+- shell:
+  - [sh pre-install.sh, Running pre installation script]
+
 - link:
     # Shell stuff
     ~/.aliases: shell/.aliases
