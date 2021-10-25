@@ -36,11 +36,8 @@ function "${FZF_PREFIX}gf" () {
 
 function "${FZF_PREFIX}gb" () {
   is_in_git_repo || return
-  git branch -a --color=always | grep -v '/HEAD\s' | sort |
-  fzf-down --ansi --multi --tac --preview-window right:70% \
-    --preview 'git lg $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
-  sed 's/^..//' | cut -d' ' -f1 |
-  sed 's#^remotes/##'
+  git for-each-ref --sort=-committerdate refs/heads/ --format='%(if)%(HEAD)%(then)%(color:bold blue)%(else)%(color:yellow)%(end)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' --color=always |
+  fzf-down --ansi --no-sort | awk '{print $1}'
 }
 
 # git tag

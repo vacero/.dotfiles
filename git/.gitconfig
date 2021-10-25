@@ -19,6 +19,7 @@
 	br = branch 
 	diff = diff --word-diff
 	dc = diff --cached
+	rmb = "!f() { git branch --merged | grep -v 'main' | while read i; do git branch -d $i; done; }; f"
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	autocrlf = input
@@ -38,7 +39,5 @@
 	whitespace = red reverse
 [rerere]
 	enabled = true
-[alias]
-	rmb = "!f() { git branch --merged | grep -v "master" | while read i; do git branch -d $i; done; }; f"
 [init]
 	defaultBranch = main
