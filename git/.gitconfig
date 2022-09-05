@@ -20,6 +20,7 @@
 	diff = diff --word-diff
 	dc = diff --cached
 	rmb = "!f() { git branch --merged | grep -v 'main' | while read i; do git branch -d $i; done; }; f"
+        continue = "-c core.editor=true rebase --continue"
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	autocrlf = input

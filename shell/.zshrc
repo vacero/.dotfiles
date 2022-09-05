@@ -20,7 +20,7 @@ antigen use oh-my-zsh # Yes, I want to use Oh My ZSH
 # Terminal stuff
 antigen bundle git
 antigen bundle zdharma/zsh-diff-so-fancy
-antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle dashixiong91/zsh-vscode
@@ -48,6 +48,18 @@ antigen theme romkatv/powerlevel10k
 # And lastly, apply the Antigen stuff
 antigen apply
 
+### Fix slowness of pastes with zsh-syntax-highlighting.zsh
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
+### Fix slowness of pastes
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -72,3 +84,5 @@ export SDKMAN_DIR="/Users/vacero/.sdkman"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval $(thefuck --alias)

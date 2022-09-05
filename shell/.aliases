@@ -1,3 +1,5 @@
 alias k=kubectl
 alias kx="kubectx"
 alias kn="kubens"
+alias klogs='kubectl logs -f deployment/$(kubectl get deployments --no-headers -o custom-columns=":metadata.name" | fzf)'
+
